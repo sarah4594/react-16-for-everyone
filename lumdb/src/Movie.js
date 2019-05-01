@@ -5,8 +5,7 @@ export default class Movie extends Component {
   static propTypes = {
     movie: PropTypes.shape({
       title: PropTypes.string.isRequired
-    }),
-    desc: PropTypes.string
+    })
   }
 
   static defaultProps = {
@@ -18,7 +17,6 @@ export default class Movie extends Component {
     return (
       <div>
         <h3>{title}</h3>
-        <p>{this.props.desc}</p>
       </div>
     )
   }
