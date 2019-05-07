@@ -1,6 +1,4 @@
-/* eslint-disable no-console */
 import React from 'react'
-import PropTypes from 'prop-types'
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
 import logo from './logo.svg'
 import './App.css'

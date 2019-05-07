@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
+import styled from 'styled-components'
 
 // export default class Movie extends Component {
 //   static propTypes = {
@@ -28,11 +29,9 @@ const POSTER_PATH = 'http://image.tmdb.org/t/p/w154'
 const Movie = props => {
   const { title, poster_path, id } = props.movie
   return (
-    <div>
-      <Link to={`/${id}`}>
-        <img src={`${POSTER_PATH}${poster_path}`} alt={title} />
-      </Link>
-    </div>
+    <Link to={`/${id}`}>
+      <Poster src={`${POSTER_PATH}${poster_path}`} alt={title} />
+    </Link>
   )
 }
 Movie.propTypes = {
@@ -46,3 +45,7 @@ Movie.defaultProps = {
 }
 
 export default Movie
+
+export const Poster = styled.img`
+  box-shadow: 0 0 35px black;
+`
