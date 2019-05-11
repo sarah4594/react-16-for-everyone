@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import Overdrive from 'react-overdrive'
 
 // export default class Movie extends Component {
 //   static propTypes = {
@@ -30,7 +31,9 @@ const Movie = props => {
   const { title, poster_path, id } = props.movie
   return (
     <Link to={`/${id}`}>
-      <Poster src={`${POSTER_PATH}${poster_path}`} alt={title} />
+      <Overdrive id={id}>
+        <Poster src={`${POSTER_PATH}${poster_path}`} alt={title} />
+      </Overdrive>
     </Link>
   )
 }
